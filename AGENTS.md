@@ -46,3 +46,7 @@ Use test-driven-development for:
 When a bug is discovered, prefer writing a regression test before fixing it.
 
 Always perform appropriate verification before declaring the task complete.
+
+# Important
+
+- Do not use abbreviation for function or class names. You MUST use meaningful names.
