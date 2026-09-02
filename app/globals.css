@@ -20,3 +20,53 @@ body {
   color: var(--color-ivory);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.border-spin {
+  position: relative;
+  overflow: hidden;
+  border-radius: 9999px;
+}
+
+.border-spin::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--border-angle),
+    #c9a35c,
+    #ff6b6b,
+    #4facfe,
+    #7c3aed,
+    #22c55e,
+    #c9a35c
+  );
+  animation: spin-angle 3s linear infinite;
+}
+
+.border-spin::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  z-index: 1;
+  border-radius: inherit;
+  background: var(--color-nocturne-975);
+}
+
+.border-spin > span {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes spin-angle {
+  to {
+    --border-angle: 360deg;
+  }
+}

@@ -40,13 +40,13 @@ const DEFAULT_IMAGES: RoundCarouselImage[] = [
 
 export default function RoundCarousel({
   images = DEFAULT_IMAGES,
-  imageWidth = 300,
-  imageHeight = 300,
+  imageWidth = 200,
+  imageHeight = 200,
   spacing = 3,
   speed = 1,
   direction = "right",
   drag = true,
-  sensitivity = 5,
+  sensitivity = 1,
   tilt = -7,
   perspective = 3000,
   cornerRadius = 22,
