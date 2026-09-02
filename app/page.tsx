@@ -1,7 +1,6 @@
 import DrinkCarousel from "./components/DrinkCarousel";
 import MenuSection from "./components/MenuSection";
 import { MenuFilterProvider } from "./components/MenuFilterProvider";
-import PulsatingBorder from "./components/PulsatingBorder";
 import { SHOP_NAME } from "../data/menu";
 
 export default function Home() {
@@ -13,21 +12,12 @@ export default function Home() {
             {SHOP_NAME}
           </span>
           <nav>
-            <PulsatingBorder
-              zIndex={50}
-              style={{
-                display: "inline-block",
-                width: "auto",
-                height: "auto",
-              }}
+            <a
+              href="#menu"
+              className="flex items-center justify-center rounded-full bg-brass px-5 py-2 text-sm font-medium text-nocturne-950 transition-colors hover:bg-brass/90"
             >
-              <a
-                href="#menu"
-                className="flex items-center justify-center rounded-[9px] bg-brass px-5 py-2 text-sm font-medium text-nocturne-950 transition-colors hover:bg-brass/90"
-              >
-                View Menu
-              </a>
-            </PulsatingBorder>
+              View Menu
+            </a>
           </nav>
         </div>
       </header>
@@ -72,23 +62,14 @@ export default function Home() {
             <span>123 Coffee Street, San Francisco, CA</span>
             <span>(415) 555-0123</span>
             <span>Open daily · 7:00 AM – 7:00 PM</span>
-            <PulsatingBorder
-              style={{
-                display: "inline-block",
-                width: "auto",
-                height: "auto",
-                alignSelf: "center",
-              }}
+            <a
+              href="https://maps.google.com/?q=123+Coffee+Street,+San+Francisco,+CA"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center rounded-full px-4 py-1.5 text-brass transition-colors hover:text-brass/80"
             >
-              <a
-                href="https://maps.google.com/?q=123+Coffee+Street,+San+Francisco,+CA"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center rounded-full px-4 py-1.5 text-brass transition-colors hover:text-brass/80"
-              >
-                Find us on Google Maps
-              </a>
-            </PulsatingBorder>
+              Find us on Google Maps
+            </a>
             <div className="mt-2 flex items-center gap-2">
               <a
                 href="https://facebook.com"
